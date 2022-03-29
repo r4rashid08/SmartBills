@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".items.ItemsFragment">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/report_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/blue_500"
+            android:fontFamily="@font/alegreya_sans"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/total_expense"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/customerSpinnerLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:ignore="HardcodedText">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/report_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="SALE"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/report_start_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:text="start Date "
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+           <com.google.android.material.button.MaterialButton
+                android:id="@+id/report_end_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="End Date"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/report_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="10dp"
+            android:text="Search"
+            tools:ignore="HardcodedText" />
+        <!--items list-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:visibility="gone"
+            android:id="@+id/report_cart_view"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/border_line">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="normal"
+                    android:textSize="8sp"
+                    android:text="@string/invoice_id"
+                    android:gravity="center"
+                    android:textColor="@color/grey_80"
+                    android:id="@+id/report_invoice_item_view"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="8sp"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:text="date Time"
+                    android:textColor="@color/grey_80"
+                    android:id="@+id/report_date_item_view"
+                    tools:ignore="SmallSp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:text="@string/total_price"
+                    android:textSize="8sp"
+                    android:textColor="@color/grey_80"
+                    android:id="@+id/report_price_item_view"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:text="Vat"
+                    android:textSize="8sp"
+                    android:id="@+id/report_vat_item_view"
+                    android:textColor="@color/grey_80"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:text="Discount"
+                    android:textSize="8sp"
+                    android:id="@+id/report_discount_item_view"
+                    android:textColor="@color/grey_80"
+                    tools:ignore="HardcodedText,SmallSp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/report_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp"
+             />
+
+
+    </LinearLayout>
+
+
+
+
+    <!--no data visualizer-->
+    <LinearLayout
+        android:id="@+id/no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/no_data"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya_sans"
+            android:text="@string/no_return_found"
+            android:textAlignment="center"
+            android:textColor="@color/blue_500"
+            android:textSize="28sp" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

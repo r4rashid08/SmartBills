@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:background="@drawable/border_line"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        tools:ignore="UselessParent">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:textStyle="bold"
+            android:text="check"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/grey_80"
+             android:id="@+id/print_item_name"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="8"
+            android:maxLines="1"
+            android:textColor="@color/grey_80"
+            android:id="@+id/print_item_qty"
+             />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="12345"
+            android:textSize="14sp"
+
+            android:textColor="@color/grey_80"
+            android:id="@+id/print_item_price"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:textStyle="bold"
+            android:text=" 1234sar"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:id="@+id/print_item_total"
+            android:textColor="@color/grey_80"
+            tools:ignore="HardcodedText,SmallSp" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

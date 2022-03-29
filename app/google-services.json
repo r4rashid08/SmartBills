@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "23256355049",
+    "project_id": "smartbills-5f2b2",
+    "storage_bucket": "smartbills-5f2b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23256355049:android:b4a1cdb3639a5502b26078",
+        "android_client_info": {
+          "package_name": "com.rashid.pos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23256355049-82m0rm9im9qc7f8iu6b7dh5dt7tbkshk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAgpdL7_coWGQafqSPs8Z0uXJNsBN9VHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23256355049-82m0rm9im9qc7f8iu6b7dh5dt7tbkshk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

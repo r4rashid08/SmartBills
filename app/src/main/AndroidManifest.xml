@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.affable.smartbills">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.aevi.permission.NGS_PRINT_SERVICE"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+    <application
+        android:name=".utils.MultiLanguage"
+        android:allowBackup="false"
+        android:fullBackupOnly="false"
+        android:icon="@drawable/pos_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/security_xlm"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/pos_logo"
+        android:supportsRtl="true"
+        tools:replace="android:allowBackup,android:icon"
+        android:theme="@style/Theme.SmartBills"
+        tools:ignore="UnusedAttribute">
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4945397523416101~8948290269"/>
+
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <activity
+            android:name=".startup.SplashScreen"
+            android:theme="@style/Theme.SmartBills.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:exported="true"
+            android:name=".startup.IntroSlider"
+            android:theme="@style/Theme.SmartBills.SplashScreen" />
+
+        <activity
+            android:exported="true"
+            android:name=".startup.SetAccountInfoActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.SmartBills.SplashScreen"/>
+
+        <activity
+            android:exported="true"
+            android:name=".startup.SetPasswordActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.SmartBills.SplashScreen"/>
+
+        <activity
+            android:exported="true"
+            android:name=".startup.LoginActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.SmartBills.SplashScreen" />
+
+        <activity
+            android:exported="true"
+            android:name=".MainActivity"
+            android:theme="@style/Theme.SmartBills.SplashScreen" />
+
+        <activity
+            android:exported="true"
+            android:name=".invoice.pdf.ViewPdfActivity" />
+        <activity
+            android:exported="true"
+            android:name=".invoice.PaymentHistoryActivity"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:exported="true"
+            android:name=".invoice.OrderDetailsActivity"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:exported="true"
+            android:name=".cart.CartActivity"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name=".sales.SalesItemsDetailsActivity"
+            android:theme="@style/Theme.SmartBills.SplashScreen"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:name=".items.EditItemsActivity" />
+
+        <activity
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:name=".items.ScannerViewActivity" />
+        <activity   android:exported="true"
+            android:hardwareAccelerated="true"
+            android:name=".items.AddItemsActivity" />
+        <activity  android:exported="true"
+            android:hardwareAccelerated="true"
+            android:name=".expenses.EditExpenseActivity" />
+        <activity  android:exported="true"
+            android:name=".expenses.AddExpenseActivity" />
+        <activity  android:exported="true"
+            android:name=".clients.EditClientActivity" />
+        <activity  android:exported="true"
+            android:name=".clients.AddClientActivity" />
+        <activity  android:exported="true"
+            android:name= ".Inventory.AddInventoryActivity" />
+
+        <activity
+            android:exported="true"
+            android:name= ".invoice.PrintertActivity" />
+
+        <activity  android:exported="true"
+            android:name= ".retrunGoods.ReturnInventoryActivity" />
+
+        <activity
+            android:exported="true"
+            android:name=".settings.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:exported="true"
+            android:name=".settings.backup.BackupActivity"
+            android:label="@string/data_backup"
+            android:parentActivityName=".settings.SettingsActivity" />
+        <activity
+            android:exported="true"
+            android:name=".settings.payment_metthod.PaymentMethodActivity"
+            android:label="@string/payment_methods"
+            android:parentActivityName=".settings.SettingsActivity" />
+        <activity
+            android:exported="true"
+            android:name=".settings.payment_metthod.EditPaymentActivity"
+            android:label="@string/update_payment"
+            android:parentActivityName=".settings.payment_metthod.PaymentMethodActivity" />
+        <activity
+            android:exported="true"
+            android:name=".settings.payment_metthod.AddPaymentActivity"
+            android:label="@string/add_payment_method"
+            android:parentActivityName=".settings.payment_metthod.PaymentMethodActivity" />
+        <activity
+            android:exported="true"
+            android:name=".settings.category.CategoriesActivity"
+            android:label="@string/categories"
+            android:parentActivityName=".settings.SettingsActivity" />
+        <activity
+            android:exported="true"
+            android:name=".settings.category.AddCategoryActivity"
+            android:label="@string/add_category"
+            android:parentActivityName=".settings.category.CategoriesActivity" />
+        <activity
+            android:exported="true"
+            android:name=".settings.category.EditCategoryActivity"
+            android:label="@string/update_category"
+            android:parentActivityName=".settings.category.CategoriesActivity" />
+
+
+        <activity
+            android:exported="true"
+            android:name=".settings.UserInfoActivity"
+            android:label="@string/ac_info"
+            android:parentActivityName=".settings.SettingsActivity" />
+        <activity
+            android:exported="true"
+            android:name=".settings.ChangePassActivity"
+            android:label="@string/change_pass"
+            android:parentActivityName=".settings.SettingsActivity" />
+        <activity
+            android:exported="true"
+            android:name=".AboutUsActivity"
+            android:theme="@style/Theme.SmartBills.AboutUs" />
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.affable.smartbills.provider"
+            android:exported="true"
+            tools:node="remove"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

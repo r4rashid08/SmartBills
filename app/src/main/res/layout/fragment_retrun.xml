@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".items.ItemsFragment">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/black"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:hint="Enter Invoice Number"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/return_invoice_number"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="20sp"
+             android:layout_marginEnd="20sp"
+             android:text="Search Return"
+             android:layout_marginTop="10dp"
+             android:id="@+id/return_search"
+            tools:ignore="HardcodedText" />
+        <!--items list-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/retrun_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp" />
+
+        <!--gape creator at the end of recycler view-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+    </LinearLayout>
+
+
+    <!--no data visualizer-->
+    <LinearLayout
+        android:id="@+id/no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/no_data" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya_sans"
+            android:text="@string/no_return_found"
+            android:textAlignment="center"
+            android:textColor="@color/blue_500"
+            android:textSize="28sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/return_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/blue_500"
+        android:contentDescription="@string/fab_content_clients"
+        android:src="@drawable/ic_shopping_cart_24"
+        app:fabSize="normal"
+        app:tint="@color/white"
+        tools:ignore="RelativeOverlap,UnusedAttribute" />
+
+
+    <TextView
+        android:id="@+id/retrun_text_count"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignTop="@id/return_fab"
+        android:layout_marginStart="-32dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/return_fab"
+        android:background="@drawable/shape_circle"
+        android:elevation="7dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:visibility="visible"
+        tools:ignore="SmallSp" />
+
+    <!--expandable fab-->
+
+</RelativeLayout>
