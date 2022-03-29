@@ -3,7 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/smartBills/app/src/main/res/drawable/bg_actionbar_gradient.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_add_client_24.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_analitics.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_backup.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_clients_24.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_expenses_color.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_export_24.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_generate_excel.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_generate_pdf.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_offline.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_print_blue.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/ic_search_24.xml" value="0.1" />
+        <entry key="..\:/smartBills/app/src/main/res/drawable/no_data.xml" value="0.1" />
         <entry key="..\:/smartBills/app/src/main/res/layout/activity_device_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/smartBills/app/src/main/res/layout/list_item_payment_history.xml" value="0.22" />
       </map>
     </option>
   </component>
